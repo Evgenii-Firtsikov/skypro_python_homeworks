@@ -47,8 +47,8 @@ try:
         "company": "success"
     }
     
-    # Ожидание 5 секунд после отправки формы
-    time.sleep(5)
+    red = driver.find_element(By.CSS_SELECTOR, "#zip-code").value_of_css_property("background-color")
+    assert red == 'rgba(248, 215, 218, 1)'
 
 
 
